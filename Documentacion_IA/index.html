@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jose Manuel Martinez Fernandez">
+    <meta name="keywords" content="Documentación, Inteligencia Artificial">
+    <title>Documentación con IA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Generadores de Documentación en JavaScript</h1>
+    </header>
+    <!-- Barra de navegación -->
+    <nav class="barra-navegacion">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Pag_Ventaja1/ventaja1.html">Ventaja 1</a></li>
+            <li><a href="Pag_Ventaja2/ventaja2.html">Ventaja 2</a></li>
+            <li><a href="Pag_Desventajas1/desventaja1.html">Desventaja 1</a></li>
+            <li><a href="Pag_Desventajas2/desventajas2.html">Desventaja 2</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Documentación con IA</h2>
+        <section class="basico">
+            <article class="basico-item">
+                <h3>Definición</h3>
+                <p>
+                    La documentación por IA se refiere a la integración de tecnologías de inteligencia artificial para
+                    mejorar y automatizar el proceso de creación, mantenimiento y gestión de la documentación técnica
+                    relacionada con el desarrollo de software.
+                </p>
+            </article>
+            <article class="basico-item">
+                <h3>Conclusión</h3>
+                <p>
+                    La implementación de IA en la documentación de software no solo busca facilitar la creación y
+                    mantenimiento de documentos, sino también mejorar la experiencia del desarrollador, reducir el
+                    tiempo de acceso a la información y aumentar la eficiencia en el ciclo de vida del desarrollo de
+                    software.
+                </p>
+            </article>
+        </section>
+
+        <section class="aplicaciones">
+            <article class="aplicaciones-item">
+                <h3>Aplicación en ámbitos de uso</h3>
+                <ol>
+                    <li>Generación de Documentación Automática:</li>
+                    <ul>
+                        <li>Documentación de Código: Herramientas de IA pueden analizar el código fuente y generar
+                            automáticamente documentación técnica, como comentarios, guías de uso y manuales de API.
+                        </li>
+                        <li>Documentación de Requisitos: La IA puede ayudar a compilar y estructurar los requisitos del
+                            software a partir de entrevistas o análisis de documentos existentes.</li>
+                    </ul>
+                    <li>Asistentes para Desarrolladores:</li>
+                    <ul>
+                        <li>Autocompletado Inteligente: Los entornos de desarrollo integrado (IDEs) pueden usar IA para
+                            sugerir fragmentos de código, completando automáticamente las funciones y métodos con
+                            documentación relevante.</li>
+                        <li>Respuestas a Preguntas Comunes: Herramientas de IA pueden proporcionar respuestas a
+                            preguntas frecuentes sobre el uso de bibliotecas y frameworks, facilitando el acceso a la
+                            documentación necesaria.</li>
+                    </ul>
+                    <li>Análisis y Optimización de Documentación:</li>
+                    <ul>
+                        <li>Detección de Errores y Inconsistencias: La IA puede identificar inconsistencias en la
+                            documentación, como discrepancias entre el código y los comentarios, ayudando a mantener la
+                            calidad y la precisión.</li>
+                        <li>Análisis de Sentimiento: Las herramientas de IA pueden analizar los comentarios de los
+                            usuarios sobre la documentación para identificar áreas de mejora y aspectos que generan
+                            confusión.</li>
+                    </ul>
+                    <li>Interacción Natural:</li>
+                    <ul>
+                        <li>Chatbots y Sistemas de Soporte: Los chatbots pueden responder a preguntas sobre la
+                            documentación técnica de manera interactiva, guiando a los desarrolladores en la búsqueda de
+                            información específica.</li>
+                    </ul>
+                    <li>Integración con Sistemas de Gestión:</li>
+                    <ul>
+                        <li>Sincronización con Repositorios de Código: La documentación puede actualizarse
+                            automáticamente en función de los cambios realizados en el código, asegurando que la
+                            información esté siempre actualizada y relevante.
+                        </li>
+                    </ul>
+                    <li>Personalización y Recomendaciones:</li>
+                    <ul>
+                        <li>Recomendaciones de Contenido: Sistemas de IA pueden analizar el historial de uso y
+                            preferencias del usuario para ofrecer documentación personalizada o sugerencias de lectura.
+                        </li>
+                    </ul>
+                    <li>Análisis de Uso y Acceso:</li>
+                    <ul>
+                        <li>Métricas de Uso: La IA puede recopilar y analizar datos sobre cómo se utiliza la
+                            documentación, permitiendo a los equipos identificar las secciones más consultadas y
+                            optimizar el contenido.</li>
+                    </ul>
+                </ol>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Generadores de Documentación en JavaScript</p>
+    </footer>
+
+    <script>
+        // Obtener todos los elementos de desventaja
+        const items = document.querySelectorAll(".basico-item, .aplicaciones-item");
+
+        // Función para mostrar los elementos con animación de rotación al cargar
+        function showItems() {
+            items.forEach((item) => {
+                const delay = item.getAttribute("data-delay");
+                item.style.transform = "rotateY(180deg)"; // Comienza rotado
+                item.style.opacity = "0"; // Comienza invisible
+
+                setTimeout(() => {
+                    item.style.transform = "rotateY(0deg)"; // Vuelve a su posición original
+                    item.style.opacity = "1"; // Se vuelve visible
+                }, delay);
+            });
+        }
+
+        // Llamar a la función para mostrar los items al cargar la página
+        window.onload = showItems;
+    </script>
+
+</body>
+
+</html>
