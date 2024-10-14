@@ -131,6 +131,10 @@ h2 {
     padding: 20px;
 }
 
+.media video {
+    max-width: 70%;
+}
+
 /* Pie de Página */
 footer {
     text-align: center;
