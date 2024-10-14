@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desventajas de JSDoc</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Desventajas de JSDoc</h1>
+    </header>
+
+    <!-- Barra de Navegación -->
+    <nav class="barra-navegacion">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../Pag_Ventaja1/ventaja1.html">Ventaja 1</a></li>
+        <li><a href="../Pag_Ventaja2/ventaja2.html">Ventaja 2</a></li>
+        <li><a href="../Pag_Desventajas1/desventaja1.html">Desventaja 1</a></li>
+        <li><a href="#">Planes</a></li>
+      </ul>
+    </nav>
+
+    <main>
+
+        <h2>Ventajas e inconvenientes del plan gratuito</h2>
+        <section class="desventajas">
+            <div class="desventaja-item">
+                <p>
+                    <h3>Link a la página de precios de GitBook</h3>
+                    <a href="https://www.gitbook.com/pricing" target="_blank">Click aquí.</a>
+                </p>
+            </div>
+            
+            <div class="desventaja-item">
+                <p>
+                    <h3>Ventajas</h3>
+                    <ul>
+                        <li>Costo cero: Ideal para usuarios individuales que no necesitan colaborar en equipo.</li>
+                        <li>Funciones básicas: Incluye lo esencial para crear y mantener documentación, con una interfaz intuitiva.</li>
+                        <li>Espacios públicos ilimitados: Permite crear y compartir documentación pública sin límite.</li>
+                    </ul>
+                </p>
+            </div>
+            
+            <div class="desventaja-item">
+                <p>
+                    <h3>Inconvenientes</h3>
+                    <ul>
+                        <li>
+                            Sin dominios personalizados: No permite usar un dominio propio para personalizar la URL. Por ejemplo, 
+                            (https://tu-proyecto.gitbook.io) esta sería la url del plan gratuito y esta (https://tu-proyecto.com) con 
+                            un plan de pago. Pero cualquier persona puede ver tu documentación si le das tu url aunque no sea en el plan de pago
+                        </li>
+                        <li>Limitado a un solo usuario: No es ideal para equipos, ya que solo permite un miembro.</li>
+                        <li>Falta de integraciones avanzadas: Carece de opciones avanzadas de colaboración y personalización disponibles en planes pagos.</li>
+                    </ul>
+                </p>
+            </div>
+        </section>
+
+      <!--</section>-->
+    </main>
+    <footer>
+      <p>&copy; 2024 Generadores de Documentación en JavaScript</p>
+    </footer>
+
+    <script>
+      // Obtener todos los elementos de desventaja
+      const items = document.querySelectorAll(".desventaja-item");
+
+      // Función para mostrar los elementos con animación de rotación al cargar
+      function showItems() {
+        items.forEach((item) => {
+          const delay = item.getAttribute("data-delay");
+          item.style.transform = "rotateY(180deg)"; // Comienza rotado
+          item.style.opacity = "0"; // Comienza invisible
+
+          setTimeout(() => {
+            item.style.transform = "rotateY(0deg)"; // Vuelve a su posición original
+            item.style.opacity = "1"; // Se vuelve visible
+          }, delay);
+        });
+      }
+
+      // Llamar a la función para mostrar los items al cargar la página
+      window.onload = showItems;
+    </script>
+  </body>
+</html>
