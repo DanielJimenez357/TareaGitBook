@@ -49,6 +49,13 @@ h1 {
 }
 
 /* Estilos para la sección de Desventajas */
+h2 {
+    color: #00796b; /* Color del encabezado */
+    text-align: center;
+    padding-top: 1.5em;
+    margin: 0;
+}
+
 .desventajas {
     display: flex;
     justify-content: space-around;
@@ -70,7 +77,7 @@ h1 {
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
-.desventaja-item h2 {
+.desventaja-item h3 {
     color: #00796b; /* Color del encabezado */
 }
 
@@ -79,18 +86,14 @@ h1 {
     color: #333;
 }
 
-/* Imagenes de las desventajas */
-.desventaja-imagen {
-    max-width: 100%; /* Asegura que las imágenes ocupen el 100% del cuadro */
-    height: auto; /* Mantiene la relación de aspecto */
-    border-radius: 8px; /* Esquinas redondeadas para las imágenes */
-    margin-top: 10px; /* Espacio superior entre el texto y la imagen */
-}
-
 /* Pie de Página */
 footer {
     text-align: center;
     padding: 20px;
     background-color: #333;
     color: white;
+}
+
+.comunitario{
+    padding: 0;
 }
