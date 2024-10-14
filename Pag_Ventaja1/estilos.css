@@ -131,10 +131,6 @@ h2 {
     padding: 20px;
 }
 
-.media video {
-    max-width: 70%;
-}
-
 /* Pie de Página */
 footer {
     text-align: center;
@@ -142,3 +138,106 @@ footer {
     background-color: #333;
     color: white;
 }
+.notificaciones{
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    flex-wrap: wrap;
+    flex-direction: column;
+}.carousel img {
+            width: 100%;
+            height: 600px; /* Ajusta el alto según tus necesidades */
+            object-fit: contain; /* Asegura que las imágenes se recorten para llenar el área sin distorsionarse */
+        }
+        /* Contenedor del carrusel */
+        .carousel {
+            width: 80%;
+            max-width: 600px;
+            overflow: hidden;
+            /*border-radius: 10px;*/
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Contenedor de las imágenes y su disposición */
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: 600px; /* Ajusta el alto según tus necesidades */
+            object-fit: contain; /* Asegura que las imágenes se recorten para llenar el área sin distorsionarse */
+        }
+        .carousel-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centra el contenido del item */
+            text-align: center; /* Centra el texto */
+        }
+        .description {
+            margin-top: 10px; /* Espacio entre la imagen y la descripción */
+            font-size: 1em; /* Tamaño de la fuente para la descripción */
+            color: #666; /* Color de la fuente para la descripción */
+            padding: 0 10px; /* Espacio en los lados de la descripción */
+        }
+
+        /* Ocultar radio buttons */
+        input[type="radio"] {
+            display: none;
+        }
+
+        /* Navegación automática por radio buttons */
+        #radio1:checked ~ .carousel-inner {
+            transform: translateX(0);
+        }
+
+        #radio2:checked ~ .carousel-inner {
+            transform: translateX(-100%);
+        }
+
+        #radio3:checked ~ .carousel-inner {
+            transform: translateX(-200%);
+        }
+
+        /* Botones de navegación manual */
+        .navigation-manual {
+            /*position: absolute;*/
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            bottom: 10px;
+        }
+
+        .manual-btn {
+            border: 2px solid white;
+            padding: 5px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 0 5px;
+        }
+
+        .manual-btn:hover {
+            background-color: rgb(0, 0, 0);
+        }
+
+        /* Navegación automática */
+        .navigation-auto {
+            /*position: absolute;*/
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            bottom: 10px;
+            visibility: hidden; /* Ocultar ya que la navegación es automática */
+        }
+
+        /* Configuración automática del cambio de imágenes */
+        #radio1:checked ~ .navigation-auto .auto-btn1,
+        #radio2:checked ~ .navigation-auto .auto-btn2,
+        #radio3:checked ~ .navigation-auto .auto-btn3 {
+            background-color: rgb(0, 0, 0);
+        }
+
+    

@@ -1,68 +1,129 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ventajas de GitBook</title>
-    <link rel="stylesheet" href="estilos.css">
-</head>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1>Ventajas de GitBook</h1>
+      <h1>Ventajas de GitBook</h1>
     </header>
 
     <!-- Barra de navegación -->
     <nav class="barra-navegacion">
-        <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="../Pag_Ventaja1/ventaja1.html">Copilot en GitBook</a></li>
-            <li><a href="../Pag_Ventaja2/ventaja2.html">Ventaja 2</a></li>
-            <li><a href="../Pag_Desventajas1/desventaja1.html">Desventaja 1</a></li>
-            <li><a href="../Documentacion_IA/index.html">Inteligencia artificial</a></li>
-            <li><a href="../planes/planes.html">Planes de GitBook</a></li>
-        </ul>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../Pag_Ventaja1/ventaja1.html">Ventaja 1</a></li>
+        <li><a href="../Pag_Ventaja2/ventaja2.html">Ventaja 2</a></li>
+        <li><a href="../Pag_Desventajas1/desventaja1.html">Desventaja 1</a></li>
+        <li>
+          <a href="../Pag_Desventajas2/desventajas2.html"> Desventaja 2</a>
+        </li>
+      </ul>
     </nav>
 
     <section class="ventajas">
-        <div class="ventaja" onclick="location.href='./descVentaja.html'">
-            <h2>Integración con GitHub Copilot AI</h2>
-            <p>GitBook permite conectarse con GitHub Copilot AI para tener información y preguntar acerca de la documentación que se crea con GitBook.</p>
-            <img src="./assets/img/exampleCopilot.avif" alt="Descripción de la imagen 1" class="imagen-ventaja">
-        </div>
-        <div class="ventaja">
-            <h2>Documentación automática</h2>
-            <p>JSDoc genera documentación en formato HTML de manera automática. Solo necesitas escribir comentarios siguiendo la sintaxis estándar, y JSDoc se encarga de generar páginas web organizadas y fáciles de navegar.</p>
-            <img src="../Imagenes/ventajas1_2.png" alt="Descripción de la imagen 2" class="imagen-ventaja">
-        </div>
-        <div class="ventaja">
-            <h2>Fácil de mantener</h2>
-            <p>Al mantener la documentación junto con el código, se reduce el riesgo de que la documentación quede desactualizada. La documentación se puede actualizar rápidamente cuando se realizan cambios en el código.</p>
-            <img src="../Imagenes/ventajas1_3.png" alt="Descripción de la imagen 3" class="imagen-ventaja">
-        </div>
+      <div class="ventaja" onclick="location.href='./descVentaja.html'">
+        <h2>Integración con GitHub Copilot AI</h2>
+        <p>
+          GitBook permite conectarse con GitHub Copilot AI para tener
+          información y preguntar acerca de la documentación que se crea con
+          GitBook.
+        </p>
+        <img
+          src="./img/exampleCopilot.avif"
+          alt="Descripción de la imagen 1"
+          class="imagen-ventaja"
+        />
+      </div>
+      <div class="ventaja">
+        <h2>Documentación automática</h2>
+        <p>
+          JSDoc genera documentación en formato HTML de manera automática. Solo
+          necesitas escribir comentarios siguiendo la sintaxis estándar, y JSDoc
+          se encarga de generar páginas web organizadas y fáciles de navegar.
+        </p>
+        <img
+          src="../Imagenes/ventajas1_2.png"
+          alt="Descripción de la imagen 2"
+          class="imagen-ventaja"
+        />
+      </div>
+      <div class="ventaja">
+        <h2>Fácil de mantener</h2>
+        <p>
+          Al mantener la documentación junto con el código, se reduce el riesgo
+          de que la documentación quede desactualizada. La documentación se
+          puede actualizar rápidamente cuando se realizan cambios en el código.
+        </p>
+        <img
+          src="../Imagenes/ventajas1_3.png"
+          alt="Descripción de la imagen 3"
+          class="imagen-ventaja"
+        />
+      </div>
     </section>
 
     <section class="media">
-        <video src="./assets/video/GitBookCopilot.mp4" controls></video>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/_ugRzPfQ8Zg?si=emEQwrZhUwWyHls-"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
     </section>
+    <section class="notificaciones">
+        
+      <h2>Tipos de notificaciones</h2>
+      <div class="carousel">
+        <!-- Radio buttons para navegación automática -->
+        <input type="radio" name="radio-btn" id="radio1" checked />
+        <input type="radio" name="radio-btn" id="radio2" />
+        <input type="radio" name="radio-btn" id="radio3" />
 
+        <!-- Contenedor de las imágenes -->
+        <div class="carousel-inner">
+          <img src="EmailNotpng.png" alt="Invitacion" />
+          <img src="MentionNot.png" alt="Imagen 2" />
+          <img src="RequestNot.png" alt="Imagen 3" />
+        </div>
+
+        <!-- Botones de navegación manual -->
+        <div class="navigation-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+        </div>
+
+        <!-- Botones de navegación automática (ocultos) -->
+        <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+        </div>
+      </div>
+    </section>
     <footer>
-        <p>&copy; 2024 Generadores de Documentación en JavaScript</p>
+      <p>&copy; 2024 Generadores de Documentación en JavaScript</p>
     </footer>
 
     <script>
-        const cuadros = document.querySelectorAll('.ventaja');
-        cuadros.forEach(cuadro => {
-            cuadro.addEventListener('mouseenter', () => {
-                cuadro.style.transform = 'scale(1.05)';
-            });
-            cuadro.addEventListener('mouseleave', () => {
-                cuadro.style.transform = 'scale(1)';
-            });
+      const cuadros = document.querySelectorAll(".ventaja");
+      cuadros.forEach((cuadro) => {
+        cuadro.addEventListener("mouseenter", () => {
+          cuadro.style.transform = "scale(1.05)";
         });
+        cuadro.addEventListener("mouseleave", () => {
+          cuadro.style.transform = "scale(1)";
+        });
+      });
     </script>
-
-</body>
-
+  </body>
 </html>
